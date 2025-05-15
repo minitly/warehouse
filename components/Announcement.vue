@@ -7,7 +7,7 @@
           <!-- 图片列表 -->
           <div class="carousel" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
             <div class="slide" v-for="(description, index) in descriptions" :key="index">
-              <img :src="`/announcementImg/img${index + 1}.png`" alt="轮播图" />
+              <img :src="`/warehouse/announcementImg/img${index + 1}.png`" alt="轮播图" />
               <p class="description-text">{{ description }}</p>
             </div>
           </div>
@@ -30,7 +30,7 @@
       <!-- 文章列表 -->
       <div class="article-container" v-show = "showArticles">
         <h2 class="article-title">Warehouse management system</h2>
-        <p class="article-content">
+        <div class="article-content">
           <!-- 在这里添加你的文章内容 -->
           <h1>1. General Provisions</h1><br>
             <h2>objective</h2><br>
@@ -96,7 +96,7 @@
 
 
           
-        </p>
+        </div>
       </div>
 
 </template>

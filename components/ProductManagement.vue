@@ -304,7 +304,7 @@ const products = ref([
         introduction:
             "A smartwatch with health monitoring, message alerts, and sports tracking features.",
         price: 2999.0,
-        imgPath: "/productImg/appleWatch.png",
+        imgPath: "/warehouse/productImg/appleWatch.png",
         amount: 5,
     },
     {
@@ -315,7 +315,7 @@ const products = ref([
         introduction:
             "A well-designed smartphone.",
         price: 7999.0,
-        imgPath: "/productImg/iphone.png",
+        imgPath: "/warehouse/productImg/iphone.png",
         amount: 150,
     },
     {
@@ -326,7 +326,7 @@ const products = ref([
         introduction:
             "A well-designed laptop.",
         price: 12299.0,
-        imgPath: "/productImg/macbook.png",
+        imgPath: "/warehouse/productImg/macbook.png",
         amount: 6650,
     },
     {
@@ -337,7 +337,7 @@ const products = ref([
         introduction:
             "A well-designed smartphone.",
         price: 5499.0,
-        imgPath: "/productImg/samsung.png",
+        imgPath: "/warehouse/productImg/samsung.png",
         amount: 3250,
     },
     {
@@ -348,7 +348,7 @@ const products = ref([
         introduction:
             "A well-designed smartphone.",
         price: 5499.0,
-        imgPath: "/productImg/huawei.png",
+        imgPath: "/warehouse/productImg/huawei.png",
         amount: 450,
     },
     {
@@ -359,7 +359,7 @@ const products = ref([
       introduction:
           "A well-designed headphone with good quality.",
       price: 1999.0,
-      imgPath: "/productImg/airpods.png",
+      imgPath: "/warehouse/productImg/airpods.png",
       amount: 3250,
     },
     {
@@ -370,7 +370,7 @@ const products = ref([
       introduction:
           "A well-designed tablet.",
       price: 5499.0,
-      imgPath: "/productImg/ipad.png",
+      imgPath: "/warehouse/productImg/ipad.png",
       amount: 550,
     },
     {
@@ -381,7 +381,7 @@ const products = ref([
       introduction:
           "A well-designed Audio system which can also be used to control the furniture in home.",
       price: 749.0,
-      imgPath: "/productImg/homepod.png",
+      imgPath: "/warehouse/productImg/homepod.png",
       amount: 8850,
     },
     {
@@ -392,7 +392,7 @@ const products = ref([
       introduction:
           "A well-designed game controller.",
       price: 249.0,
-      imgPath: "/productImg/xbox.png",
+      imgPath: "/warehouse/productImg/xbox.png",
       amount: 450,
     },
     {
@@ -403,7 +403,7 @@ const products = ref([
       introduction:
           "A well-designed Display screen.",
       price: 749.0,
-      imgPath: "/productImg/aoc.png",
+      imgPath: "/warehouse/productImg/aoc.png",
       amount: 1350,
     },
     {
@@ -414,7 +414,7 @@ const products = ref([
       introduction:
           "A well-designed keyboard designed for gaming.",
       price: 249.0,
-      imgPath: "/productImg/keyboard.png",
+      imgPath: "/warehouse/productImg/keyboard.png",
       amount: 450,
     },
     {
@@ -425,7 +425,7 @@ const products = ref([
       introduction:
           "A well-designed mouse designed for gaming.",
       price: 249.0,
-      imgPath: "/productImg/gpw.png",
+      imgPath: "/warehouse/productImg/gpw.png",
       amount: 1199,
     }
 ]);
