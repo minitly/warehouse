@@ -19,4 +19,4 @@ logs
 .idea
 
 package-lock.json
-nuxt.config.ts
+pnpm-lock.yaml
