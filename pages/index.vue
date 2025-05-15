@@ -90,19 +90,19 @@
                                     href="#"
                                     class="text-gray-400 hover:text-white transition-colors"
                                 >
-                                    <Icon name="uil:linkedin" class="w-6 h-6" />
+                                    <LinkedIn class="w-6 h-6" />
                                 </a>
                                 <a
                                     href="#"
                                     class="text-gray-400 hover:text-white transition-colors"
                                 >
-                                    <Icon name="uil:twitter" class="w-6 h-6" />
+                                    <Twitter class="w-6 h-6" />
                                 </a>
                                 <a
                                     href="#"
                                     class="text-gray-400 hover:text-white transition-colors"
                                 >
-                                    <Icon name="uil:youtube" class="w-6 h-6" />
+                                    <Youtube class="w-6 h-6" />
                                 </a>
                             </div>
                         </div>
@@ -149,6 +149,9 @@ const features = [
 ];
 
 import { ref, onMounted } from "vue";
+import LinkedIn from "~/components/Icons/LinkedIn.vue";
+import Twitter from "~/components/Icons/Twitter.vue";
+import Youtube from "~/components/Icons/Youtube.vue";
 
 // 步骤 3 的动画代码应放在这里 ▼
 const title = ref(null); // 对应模板中的 <h1 ref="title">

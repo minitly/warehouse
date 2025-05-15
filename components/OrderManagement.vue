@@ -11,8 +11,7 @@
                             placeholder="Search for cabin or guest name..."
                             class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                         />
-                        <Icon
-                            name="heroicons:magnifying-glass"
+                        <MagnifyingGlass
                             class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
                         />
                         <button
@@ -20,7 +19,7 @@
                             @click="searchQuery = ''"
                             class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                         >
-                            <Icon name="heroicons:x-mark" class="w-5 h-5" />
+                            <XMark class="w-5 h-5" />
                         </button>
                     </div>
                 </div>
@@ -29,13 +28,13 @@
                         @click="openAddBookingModal"
                         class="px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
                     >
-                        <Icon name="heroicons:plus" class="w-5 h-5" />
+                        <Plus class="w-5 h-5" />
                         Create order
                     </button>
                     <button
                         class="px-4 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2"
                     >
-                        <Icon name="heroicons:arrow-path" class="w-5 h-5" />
+                        <ArrowPath class="w-5 h-5" />
                         Refresh
                     </button>
                 </div>
@@ -168,7 +167,7 @@
                         @click="closeBookingModal"
                         class="text-gray-500 hover:text-gray-700"
                     >
-                        <Icon name="heroicons:x-mark" class="w-6 h-6" />
+                        <XMark class="w-6 h-6" />
                     </button>
                 </div>
                 <form @submit.prevent="handleSubmit" class="space-y-4">
@@ -236,8 +235,7 @@
                                         : 'border-gray-300',
                                 ]"
                             />
-                            <Icon
-                                name="heroicons:calendar"
+                            <CalendarIcon
                                 class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
                             />
                         </div>
@@ -328,6 +326,12 @@
 import { ref, computed } from "vue";
 import { Calendar, DatePicker } from "v-calendar";
 import "v-calendar/style.css";
+
+import MagnifyingGlass from "./Icons/MagnifyingGlass.vue";
+import XMark from "./Icons/XMark.vue";
+import CalendarIcon from "./Icons/Calendar.vue";
+import ArrowPath from "./Icons/ArrowPath.vue";
+import Plus from "./Icons/Plus.vue";
 
 interface Booking {
     cabin: string;

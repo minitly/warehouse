@@ -5,7 +5,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-sm">
                     <div class="flex items-center">
                         <div class="p-3 bg-blue-100 rounded-lg">
-                            <Icon name="heroicons:shopping-cart" class="w-6 h-6 text-blue-600" />
+                            <ShoppingCart class="w-6 h-6 text-blue-600" />
                         </div>
                         <div class="ml-4">
                             <p class="text-sm text-gray-500">Orders</p>
@@ -17,7 +17,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-sm">
                     <div class="flex items-center">
                         <div class="p-3 bg-green-100 rounded-lg">
-                            <Icon name="heroicons:currency-dollar" class="w-6 h-6 text-green-600" />
+                            <CurrencyDollar class="w-6 h-6 text-green-600" />
                         </div>
                         <div class="ml-4">
                             <p class="text-sm text-gray-500">Revenue</p>
@@ -29,7 +29,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-sm">
                     <div class="flex items-center">
                         <div class="p-3 bg-purple-100 rounded-lg">
-                            <Icon name="heroicons:users" class="w-6 h-6 text-purple-600" />
+                            <Users class="w-6 h-6 text-purple-600" />
                         </div>
                         <div class="ml-4">
                             <p class="text-sm text-gray-500">Users</p>
@@ -41,7 +41,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-sm">
                     <div class="flex items-center">
                         <div class="p-3 bg-orange-100 rounded-lg">
-                            <Icon name="heroicons:cube" class="w-6 h-6 text-orange-600" />
+                            <Cube class="w-6 h-6 text-orange-600" />
                         </div>
                         <div class="ml-4">
                             <p class="text-sm text-gray-500">Products</p>
@@ -54,7 +54,7 @@
                 class="ml-6 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
                 v-if="!loading"
                 >
-                <Icon name="heroicons:sparkles" class="w-5 h-5" />
+                <Sparkles class="w-5 h-5" />
                 AI intelligent analysis
             </button>
             <button @click="getAIAnalysis"
@@ -72,7 +72,7 @@
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-lg font-semibold">AI intelligence analysis reports</h3>
                     <button @click="showAIAnalysis = false" class="text-gray-500 hover:text-gray-700">
-                        <Icon name="heroicons:x-mark" class="w-6 h-6" />
+                        <XMark class="w-6 h-6" />
                     </button>
                 </div>
                 <div class="space-y-4">
@@ -191,14 +191,18 @@
 </template>
 
 <script setup lang="ts">
-import InternalLayout from "~/layouts/internal.vue";
+
 import LineChart from "~/components/charts/LineChart.vue";
 import PieChart from "~/components/charts/PieChart.vue";
 import { ref } from "vue";
 import axios from 'axios'
 
-
-
+import ShoppingCart from "~/components/Icons/ShoppingCart.vue";
+import CurrencyDollar from "~/components/Icons/CurrencyDollar.vue";
+import Sparkles from "~/components/Icons/Sparkles.vue";
+import Users from "~/components/Icons/Users.vue";
+import Cube from "~/components/Icons/Cube.vue";
+import XMark from "~/components/Icons/XMark.vue";
 
 const showAIAnalysis = ref(false);
 

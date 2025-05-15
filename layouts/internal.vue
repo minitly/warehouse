@@ -31,7 +31,7 @@
                             'bg-blue-50 text-blue-600': isActive(item.path),
                         }"
                     >
-                        <Icon :name="item.icon" class="w-6 h-6" />
+                        <component  :is="item.icon" class="w-6 h-6" />
                         <span
                             v-if="!isCollapsed"
                             class="ml-4 text-base font-medium"
@@ -71,8 +71,7 @@
                         @click="toggleUserMenu"
                         class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                     >
-                        <Icon
-                            name="heroicons:user"
+                        <User
                             class="w-6 h-6 text-blue-600"
                         />
                     </div>
@@ -102,8 +101,7 @@
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                             >
                                 <div class="flex items-center">
-                                    <Icon
-                                        name="heroicons:user-circle"
+                                    <UserCircle
                                         class="w-5 h-5 mr-2 text-gray-400"
                                     />
                                     Personal Information
@@ -114,8 +112,7 @@
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                             >
                                 <div class="flex items-center">
-                                    <Icon
-                                        name="heroicons:cog-6-tooth"
+                                    <Cog6Tooth
                                         class="w-5 h-5 mr-2 text-gray-400"
                                     />
                                     Account settings
@@ -126,8 +123,7 @@
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                             >
                                 <div class="flex items-center">
-                                    <Icon
-                                        name="heroicons:bell"
+                                    <Bell
                                         class="w-5 h-5 mr-2 text-gray-400"
                                     />
                                     Message notifications
@@ -139,8 +135,7 @@
                                 @click="handleLogout"
                                 class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-50 flex items-center"
                             >
-                                <Icon
-                                    name="heroicons:arrow-right-on-rectangle"
+                                <ArrowRightOnRectangle
                                     class="w-5 h-5 mr-2"
                                 />
                                 Sign out
@@ -168,8 +163,7 @@
                     @click="toggleSidebar"
                     class="p-2 rounded-lg hover:bg-gray-100 transition-colors"
                 >
-                    <Icon
-                        name="heroicons:bars-3"
+                    <Bar3
                         class="w-6 h-6 text-gray-600"
                     />
                 </button>
@@ -191,6 +185,17 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import User from "~/components/Icons/User.vue";
+import UserCircle from "~/components/Icons/UserCircle.vue";
+import Cog6Tooth from "~/components/Icons/Cog6Tooth.vue";
+import Bell from "~/components/Icons/Bell.vue";
+import ArrowRightOnRectangle from "~/components/Icons/ArrowRightOnRectangle.vue";
+import Bar3 from "~/components/Icons/Bar3.vue";
+import Squares2x2 from "~/components/Icons/Squares2x2.vue";
+import MegaPhone from "~/components/Icons/MegaPhone.vue";
+import ClipboardDocumentList from "~/components/Icons/ClipboardDocumentList.vue";
+import Users from "~/components/Icons/Users.vue";
+import RectangleGroup from "~/components/Icons/RectangleGroup.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -202,32 +207,32 @@ const menuItems = [
     {
         name: "Dashboard",
         path: "/internal/dashboard",
-        icon: "heroicons:squares-2x2",
+        icon: Squares2x2,
     },
     {
         name: "Announcement",
         path: "/internal/announcement",
-        icon: "heroicons:megaphone",
+        icon: MegaPhone,
     },
     {
         name: "OrderManagement",
         path: "/internal/orders",
-        icon: "heroicons:clipboard-document-list",
+        icon: ClipboardDocumentList,
     },
     {
         name: "ProductManagement",
         path: "/internal/products",
-        icon: "heroicons:cube",
+        icon: RectangleGroup,
     },
     {
         name: "UserManagement",
         path: "/internal/users",
-        icon: "heroicons:users",
+        icon: Users,
     },
     {
         name: "Settings",
         path: "/internal/settings",
-        icon: "heroicons:cog-6-tooth",
+        icon: Cog6Tooth,
     },
 
 ];

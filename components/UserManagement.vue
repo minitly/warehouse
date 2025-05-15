@@ -11,8 +11,7 @@
                                 placeholder="Search for the employee's name..."
                                 class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                             />
-                            <Icon
-                                name="heroicons:magnifying-glass"
+                            <MagnifyingGlass
                                 class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
                             />
                             <button
@@ -20,7 +19,7 @@
                                 @click="searchQuery = ''"
                                 class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                             >
-                                <Icon name="heroicons:x-mark" class="w-5 h-5" />
+                                <XMark class="w-5 h-5" />
                             </button>
                         </div>
                     </div>
@@ -29,13 +28,13 @@
                             @click="openAddUserModal"
                             class="px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
                         >
-                            <Icon name="heroicons:plus" class="w-5 h-5" />
+                            <Plus class="w-5 h-5" />
                             Add employees
                         </button>
                         <button
                             class="px-4 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2"
                         >
-                            <Icon name="heroicons:arrow-path" class="w-5 h-5" />
+                            <ArrowPath class="w-5 h-5" />
                             Refresh
                         </button>
                     </div>
@@ -133,8 +132,7 @@
                                             <div
                                                 class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center"
                                             >
-                                                <Icon
-                                                    name="heroicons:user"
+                                                <UserIcon
                                                     class="w-6 h-6 text-blue-600"
                                                 />
                                             </div>
@@ -183,12 +181,12 @@
                                             "
                                             class="text-gray-400 hover:text-gray-600"
                                         >
-                                            <Icon
-                                                :name="
-                                                    user.showPassword
-                                                        ? 'heroicons:eye-slash'
-                                                        : 'heroicons:eye'
-                                                "
+                                            <EyeSlash
+                                                v-if="user.showPassword"
+                                                class="w-5 h-5"
+                                            />
+                                            <Eye
+                                                v-else
                                                 class="w-5 h-5"
                                             />
                                         </button>
@@ -233,7 +231,7 @@
                         @click="closeUserModal"
                         class="text-gray-500 hover:text-gray-700"
                     >
-                        <Icon name="heroicons:x-mark" class="w-6 h-6" />
+                        <XMark class="w-6 h-6" />
                     </button>
                 </div>
                 <form @submit.prevent="handleSubmit" class="space-y-4">
@@ -297,6 +295,13 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import InternalLayout from "~/layouts/internal.vue";
+import Eye from "~/components/Icons/Eye.vue";
+import EyeSlash from "~/components/Icons/EyeSlash.vue";
+import UserIcon from "~/components/Icons/User.vue";
+import MagnifyingGlass from "~/components/Icons/MagnifyingGlass.vue";
+import XMark from "~/components/Icons/XMark.vue";
+import Plus from "~/components/Icons/Plus.vue";
+import ArrowPath from "~/components/Icons/ArrowPath.vue";
 
 interface User {
     id: number;

@@ -12,8 +12,7 @@
                             class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                             @keyup.enter="handleSearch"
                         />
-                        <Icon
-                            name="heroicons:magnifying-glass"
+                        <MagnifyingGlass
                             class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
                         />
                         <button
@@ -21,7 +20,7 @@
                             @click="searchQuery = ''"
                             class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                         >
-                            <Icon name="heroicons:x-mark" class="w-5 h-5" />
+                            <XMark class="w-5 h-5" />
                         </button>
                     </div>
                 </div>
@@ -30,8 +29,7 @@
                         @click="handleSearch"
                         class="px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
                     >
-                        <Icon
-                            name="heroicons:magnifying-glass"
+                        <MagnifyingGlass
                             class="w-5 h-5"
                         />
                         Search
@@ -40,7 +38,7 @@
                         @click="openAddProductModal"
                         class="px-4 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2"
                     >
-                        <Icon name="heroicons:plus" class="w-5 h-5" />
+                        <Plus class="w-5 h-5" />
                         Add product
                     </button>
                 </div>
@@ -274,6 +272,11 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
+
+import XMark from "~/components/Icons/XMark.vue";
+import MagnifyingGlass from "~/components/Icons/MagnifyingGlass.vue";
+import Plus from "~/components/Icons/Plus.vue";
+
 
 const searchQuery = ref("");
 const selectedTypes = ref<string[]>([]);

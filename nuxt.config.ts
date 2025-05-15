@@ -19,6 +19,6 @@ export default defineNuxtConfig({
     },
   },
   components: {
-    dirs: ["~/components", "~/components/icons"],
+    dirs: ["~/components", "~/components/Icons"],
   },
 })
