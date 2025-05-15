@@ -1,5 +1,7 @@
 <template>
-  <div class="text-center font-bold text-2xl">
-    Hello World!
-  </div>
+  <NuxtPage />
 </template>
+
+<script setup lang="ts">
+import { NuxtPage } from "#components";
+</script>
